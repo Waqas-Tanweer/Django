@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
+from django.urls  import reverse
 
 # Create your views here.
 
 def func(request):
-    return HttpResponse("<h2 style='text-align:center'>Welcome to my Django Project</h2>")
+    return render(request, "htmls\home.html")
