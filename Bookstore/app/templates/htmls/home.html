@@ -7,7 +7,7 @@
     {% for i in data %}
     <ul>
         <li>
-            {{i}}
+            <a href="{% url 'log:book-details' i %}">{{i}}</a>
         </li>
     </ul>
     {% endfor %}
