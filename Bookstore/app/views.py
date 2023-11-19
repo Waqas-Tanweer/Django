@@ -7,18 +7,19 @@ from django.urls  import reverse
 # def func(request):
 #     return HttpResponse('Welcome to Django')
 
-d = {'HP':{'cat' : 'adv'},
-     'FS':{'cat' : 'sex'},
-     'WOF':{'cat' : 'moti'},
+d = {'HP':{'category' : 'adventure', 'price' : 800 , 'ratings' : 8.6},
+     'FS':{'category' : 'fantasy', 'price' : 500, 'ratings' : 5.8},
+     'WOF':{'category' : 'motivational', 'price' : 1200, 'ratings' : 9.3},
 }
+
+
 
 
 
 def func(request):
     return render(request, "htmls\home.html", {'data':d})
 
-def func2(request, day):
-    day = day
-    c = list(d)
+def func2(request, book):
+    book = book
     print(d)
-    return render(request, "htmls\details.html", {'data':d, 'c':c, 'day':day})
+    return render(request, "htmls\details.html", {'data':d, 'book':book, 'l': d[book], })

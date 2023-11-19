@@ -2,12 +2,13 @@
 
 {% block title %} Homepage {% endblock title %}
 {% block body %}
+<h2 style = "color: red">__All Books__</h2>
     <!-- <center><h2>Welocme to Django</h2></center> -->
 
     {% for i in data %}
     <ul>
         <li>
-            <a href="{% url 'log:book-details' i %}">{{i}}</a>
+            <a style = "color:rgb(8, 123, 64)" href="{% url 'log:book-details' i %}">{{i}}</a>
         </li>
     </ul>
     {% endfor %}

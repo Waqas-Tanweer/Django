@@ -4,7 +4,10 @@
 
 
 {% block body %}
-<h2>{{day}}</h2>
 
+<h2>{{book}} :</h2>
+<h4>{{l}} </h4>
+<br><br>
+<a href="{% url 'log:index' %}">Return to Home</a>
 
 {% endblock %}
